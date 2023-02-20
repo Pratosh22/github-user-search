@@ -1,7 +1,7 @@
 import axios from 'axios';
 import SearchBar from './components/searchBar';
 import Navbar from './components/Navbar';
-import './app.css'
+import './App.css'
 import Card from './components/Card';
 import { useState,useEffect } from 'react';
 function App(){
