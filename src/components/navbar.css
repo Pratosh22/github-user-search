@@ -15,4 +15,8 @@ button {
 .top-bar img {
     margin-right: 1rem;
 }
-
+@media screen and (max-width: 800px){
+    .top-bar  {
+        margin-top: 0.5rem;
+    }
+}

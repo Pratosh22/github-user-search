@@ -75,3 +75,36 @@ a{
 .not-available{
     opacity: 0.5;
 }
+.link a:hover{
+    text-decoration: underline;
+}
+@media screen and (max-width: 800px){
+    .main-left{
+        display: flex;
+    }
+    .card{
+        flex-direction:column;
+    }
+    .details{
+        flex-direction:column;
+        padding-bottom: 0;
+    }
+    .card-image img{
+        max-width: 70px;
+        max-height: 70px;
+        margin-right: 1rem;
+    }
+    .bio{
+        font-size:14px;
+        line-height: 1.5;
+    }
+    .main-right{
+        padding-left:0;
+        padding-right:0;
+    }
+    .small-card{
+        justify-content: space-between;
+        margin-right:1rem;
+        margin-left:1rem;
+    }
+}

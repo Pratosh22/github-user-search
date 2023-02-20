@@ -11,11 +11,11 @@ input{
     margin-bottom: 2rem;
     outline: none;
 }
+form{
+    position:relative;
+}
 .search{
     cursor: pointer;
-    position: absolute;
-    top:50%;
-    right:0.6rem;
     min-width: 106px;
     background-color: #0079fe;
     border: none;
@@ -26,4 +26,22 @@ input{
     transform:translateY(-50%);
     transition: background-color .3s ease-in-out;
 }
-
+form img{
+    position: relative;
+    top: 50px;
+    left: 20px;
+}
+form button{
+    position: absolute;
+    top:65px;
+    right:10px;
+}
+@media screen and (max-width: 768px){
+   input{
+    font-size:14px;
+   }
+   .search{
+    min-width:90px;
+   }
+}
+    
