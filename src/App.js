@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import axios from 'axios';
+import SearchBar from './components/searchBar';
+import Navbar from './components/Navbar';
+import './app.css'
+import Card from './components/Card';
+import { useState,useEffect } from 'react';
+function App(){
+    const [data,setData]=useState('');
+    useEffect(()=>{
+        getUser('octocat');
+    },[]);
+    const getUser= async (term)=>{
+        const url=`https://api.github.com/users/`+term;
+        const res=await axios.get(url);
+        console.log(res.data);
+        setData(res.data);
+    } 
+    return(
+        <div className='container'>
+            <Navbar/>
+            <SearchBar onClick={getUser} />
+            <Card data={data}/>
+        </div>
+    )
 }
-
 export default App;
